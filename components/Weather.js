@@ -41,9 +41,29 @@ export default function Weather(props){
         )
         } 
         else if (`${props.zipCode}` == '50000'){
-            let bg5 ='../bg3.jpg'
+            let bg3 ='../bg3.jpg'
             return(
-             <ImageBackground source={require(bg)} style={styles.backdrop}>
+             <ImageBackground source={require(bg3)} style={styles.backdrop}>
+                 <Text>Zip Code</Text>
+                 <Text>{props.zipCode}</Text>
+                 <Forecast {...forecastInfo}/>
+             </ImageBackground>
+         )
+         } 
+         else if (`${props.zipCode}` == '40000'){
+            let bg4 ='../bg4.jpg'
+            return(
+             <ImageBackground source={require(bg4)} style={styles.backdrop}>
+                 <Text>Zip Code</Text>
+                 <Text>{props.zipCode}</Text>
+                 <Forecast {...forecastInfo}/>
+             </ImageBackground>
+         )
+         } 
+         else if (`${props.zipCode}` == '20000'){
+            let bg5 ='../bg5.jpg'
+            return(
+             <ImageBackground source={require(bg5)} style={styles.backdrop}>
                  <Text>Zip Code</Text>
                  <Text>{props.zipCode}</Text>
                  <Forecast {...forecastInfo}/>
