@@ -35,7 +35,7 @@ const availableZipItems = [
     );
    
    }
-
+   
    const styles  = StyleSheet.create({
        ZipItem:{
            flex: 1,
