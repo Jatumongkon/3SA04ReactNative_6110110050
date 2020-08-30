@@ -35,7 +35,7 @@ const availableZipItems = [
     );
    
    }
-   
+
    const styles  = StyleSheet.create({
        ZipItem:{
            flex: 1,
@@ -43,7 +43,8 @@ const availableZipItems = [
            justifyContent: 'space-between',
        },
        zipPlace:{
-           flex : 1, 
+           flex : 1,
+            
        },
        zipCode:{
             flex : 1,

@@ -34,8 +34,8 @@ export default function Weather(props){
         if(`${props.zipCode}` == '90110'){
            return(
             <ImageBackground source={require(bg)} style={styles.backdrop}>
-                <Text>Zip Code</Text>
-                <Text>{props.zipCode}</Text>
+                <Text >Zip Code</Text>
+                <Text style = {styles.fonts}>{props.zipCode}</Text>
                 <Forecast {...forecastInfo}/>
             </ImageBackground>
         )
@@ -45,7 +45,7 @@ export default function Weather(props){
             return(
              <ImageBackground source={require(bg3)} style={styles.backdrop}>
                  <Text>Zip Code</Text>
-                 <Text>{props.zipCode}</Text>
+                 <Text style = {styles.fonts}>{props.zipCode}</Text>
                  <Forecast {...forecastInfo}/>
              </ImageBackground>
          )
@@ -55,7 +55,7 @@ export default function Weather(props){
             return(
              <ImageBackground source={require(bg4)} style={styles.backdrop}>
                  <Text>Zip Code</Text>
-                 <Text>{props.zipCode}</Text>
+                 <Text style = {styles.fonts}>{props.zipCode}</Text>
                  <Forecast {...forecastInfo}/>
              </ImageBackground>
          )
@@ -65,7 +65,7 @@ export default function Weather(props){
             return(
              <ImageBackground source={require(bg5)} style={styles.backdrop}>
                  <Text>Zip Code</Text>
-                 <Text>{props.zipCode}</Text>
+                 <Text style = {styles.fonts}>{props.zipCode}</Text>
                  <Forecast {...forecastInfo}/>
              </ImageBackground>
          )
@@ -75,30 +75,25 @@ export default function Weather(props){
             return(
                 <ImageBackground source={require(bg2)} style={styles.backdrop}>
                     <Text>Zip Code</Text>
-                    <Text>{props.zipCode}</Text>
-                    <Forecast {...forecastInfo}/>
+                    <Text style = {styles.fonts}>{props.zipCode}</Text>
+                    <Forecast  {...forecastInfo} />
                 </ImageBackground>
             )
         }
 
       
-    /*
-    return(
-        
-        <ImageBackground source={require(bg2)} style={styles.backdrop}>
-            <Text>Zip Code</Text>
-            <Text>{props.zipCode}</Text>
-            <Forecast {...forecastInfo}/>
-        </ImageBackground>
-    )
-*/
+   
 }
 
 const styles = StyleSheet.create({
     backdrop: {
-    flexDirection: 'column',
     alignItems: 'center',
     width: '100%',
     height: '100%'
+    },
+    fonts:{ 
+        fontSize: 20,
+        alignItems: 'center',
+        backgroundColor: 'white',
     },
    });
