@@ -30,28 +30,48 @@ export default function Weather(props){
         }
         }, [props.zipCode])
 
-        var str = '../bg.jpg'
-        /*if(`${props.zipCode}` == '90110'){
-        str = '../bg2.jpg'  ;
-        console.log("ok") ;
+        var bg = `../bg.jpg`
+        if(`${props.zipCode}` == '90110'){
+           return(
+            <ImageBackground source={require(bg)} style={styles.backdrop}>
+                <Text>Zip Code</Text>
+                <Text>{props.zipCode}</Text>
+                <Forecast {...forecastInfo}/>
+            </ImageBackground>
+        )
         } 
+        else if (`${props.zipCode}` == '50000'){
+            let bg5 ='../bg3.jpg'
+            return(
+             <ImageBackground source={require(bg)} style={styles.backdrop}>
+                 <Text>Zip Code</Text>
+                 <Text>{props.zipCode}</Text>
+                 <Forecast {...forecastInfo}/>
+             </ImageBackground>
+         )
+         } 
         else {
-            console.log("false")
-          str = '../bg.jpg' ;
+            let bg2  = '../bg2.jpg'
+            return(
+                <ImageBackground source={require(bg2)} style={styles.backdrop}>
+                    <Text>Zip Code</Text>
+                    <Text>{props.zipCode}</Text>
+                    <Forecast {...forecastInfo}/>
+                </ImageBackground>
+            )
         }
-        console.log(str) ;
-*/
+
       
-    
+    /*
     return(
         
-        <ImageBackground source={require(str)} style={styles.backdrop}>
+        <ImageBackground source={require(bg2)} style={styles.backdrop}>
             <Text>Zip Code</Text>
             <Text>{props.zipCode}</Text>
             <Forecast {...forecastInfo}/>
         </ImageBackground>
     )
-
+*/
 }
 
 const styles = StyleSheet.create({
