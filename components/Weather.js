@@ -15,7 +15,7 @@ export default function Weather(props){
     useEffect(() => {
         console.log(`${props.zipCode}`)
         if (props.zipCode) {
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=90110,th&units=metric&APPID=15ba2e1cf9bb007deefc525dcd0a921a`)
+        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${props.zipCode},th&units=metric&APPID=15ba2e1cf9bb007deefc525dcd0a921a`)
         .then((response) => response.json())
         .then((json) => {
         setForecastInfo({
